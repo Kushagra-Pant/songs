@@ -105,6 +105,7 @@ function getArtistData(){
         songs.push(s)
     }
     artists.sort((a, b) => b.y - a.y);
+    songs.sort((a, b) => b.y - a.y);
     return {artists: artists, songs: songs}
 
 }
