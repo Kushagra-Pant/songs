@@ -60,10 +60,16 @@ async function addSong(artist, song, plays){
         data.push(child);
     }
 
-    child.songs.push({
-        name: song,
-        plays: parseInt(plays)
-    });
+    songExists = child.songs.find(s => s.name === song);
+
+    if (songExists) {
+        songExists.plays += parseInt(plays);
+    } else {
+        child.songs.push({
+            name: song,
+            plays: parseInt(plays)
+        });
+    }
 }
 
 async function main() {
