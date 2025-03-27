@@ -63,6 +63,7 @@ async function addSong(artist, song, plays){
     songExists = child.songs.find(s => s.name === song);
 
     if (songExists) {
+        console.log("it exists")
         songExists.plays += parseInt(plays);
     } else {
         child.songs.push({
@@ -87,7 +88,6 @@ async function main() {
         addSong(rawData[i]['artist']['name'], rawData[i]['name'], rawData[i]['playcount'])
     }
     console.log(data)
-    getArtistData()
     visualizeData()
 }
 
