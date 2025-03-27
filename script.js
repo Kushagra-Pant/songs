@@ -42,7 +42,7 @@ async function loadData() {
       .then(fileData  => {
         lines = fileData.split('\n');
 
-        for(let i = 0; i < lines.length; i++){
+        for(let i = 0; i < lines.length - 1; i++){
             e = lines[i].split('\t')
             addSong(e[0], e[1], e[2])
         }
@@ -126,10 +126,10 @@ function visualizeData() {
             }
         },
         title: {
-            text: 'Browser market shares. January, 2022'
+            text: 'My Music Taste'
         },
         subtitle: {
-            text: 'Click the columns to view versions. Source: <a href="http://statcounter.com" target="_blank">statcounter.com</a>'
+            text: 'Click on a bar to see individual songs'
         },
         accessibility: {
             announceNewData: {
@@ -176,7 +176,7 @@ function visualizeData() {
         drilldown: {
             breadcrumbs: {
                 position: {
-                    align: 'right'
+                    align: 'center'
                 }
             },
             series: getArtistData()['songs']
