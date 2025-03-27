@@ -102,6 +102,7 @@ function getArtistData(){
             s['data'].push([data[i]['songs'][song]['name'], data[i]['songs'][song]['plays']])
         }
         artists.push({name: data[i]['artist'], y: sum, drilldown: data[i]['artist']})
+        s['data'].sort((a, b) => b[1] - a[1]);
         songs.push(s)
     }
     artists.sort((a, b) => b.y - a.y);
