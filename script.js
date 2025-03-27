@@ -1,4 +1,3 @@
-const API_KEY = process.env.API_KEY;    
 const USERNAME = 'blyattrosten';
 const LIMIT = 200; // Max per page
 const MIN_PLAYS = 4;
@@ -10,7 +9,7 @@ async function getAllTopTracks() {
     let allTracks = [];
 
     while (page <= totalPages) {
-        const url = `https://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=${USERNAME}&api_key=${API_KEY}&format=json&period=overall&limit=${LIMIT}&page=${page}`;
+        const url = `https://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=${USERNAME}&api_key=ea9b1a3a7428694bb61a1dd177af0e0e&format=json&period=overall&limit=${LIMIT}&page=${page}`;
 
         try {
             const response = await fetch(url);
