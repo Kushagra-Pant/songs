@@ -1,7 +1,7 @@
 const USERNAME = 'blyattrosten';
 const LIMIT = 200; // Max per page
 const MIN_PLAYS = 4;
-exceptions = {artist: [['Travi$ Scott', 'Travis Scott']]}
+exceptions = {artist: [['Travi$ Scott', 'Travis Scott'], ["Lil' Wayne", 'Lil Wayne']]}
 
 async function getAllTopTracks() {
     let page = 1;
